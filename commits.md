@@ -32,10 +32,10 @@ git add .
 git commit -m "1.0.0"
 
 # Crear repositorio en github
-gh repo create vite-scrimba-chat --private
+gh repo create lotto-v1 --private
 
 # Agregar repositorio remoto
-git remote add origin https://github.com/sand001/vite-scrimba-chat
+git remote add origin https://github.com/sand001/lotto-v1
 
 # Subir cambios
 git push -u origin main

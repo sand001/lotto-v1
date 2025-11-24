@@ -1,1 +1,4 @@
 1.- implementar un diseño mas modular para poder deparar la logica 
+
+git config --global user.email "casandi001@gmail.com"
+git config --global user.name "casandi001"
