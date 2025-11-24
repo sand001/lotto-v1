@@ -1,0 +1,55 @@
+===========================================
+SOLUCIÓN PARA ERROR 400 EN XAMPP
+===========================================
+
+Si recibes un error 400, prueba estas soluciones:
+
+1. ELIMINA TEMPORALMENTE EL ARCHIVO .htaccess
+   - Renombra .htaccess a .htaccess.bak
+   - O elimínalo temporalmente
+   - Esto eliminará cualquier conflicto de configuración
+
+2. VERIFICA QUE APACHE ESTÉ CORRIENDO
+   - Abre el Panel de Control de XAMPP
+   - Asegúrate de que Apache esté en verde (Running)
+
+3. VERIFICA LA RUTA EN EL NAVEGADOR
+   - Debe ser: http://localhost/lotto-sorteos-php/
+   - O: http://127.0.0.1/lotto-sorteos-php/
+   - NO uses: http://localhost/lotto-sorteos-php/index.php (aunque también debería funcionar)
+
+4. VERIFICA LOS PERMISOS DE ARCHIVOS
+   - Asegúrate de que todos los archivos sean legibles
+   - En Windows generalmente no hay problema con permisos
+
+5. REVISA LOS LOGS DE ERROR
+   - Ve a: C:\xampp\apache\logs\error.log
+   - Busca errores relacionados con PHP o Apache
+
+6. VERIFICA LA VERSIÓN DE PHP
+   - Abre: http://localhost/dashboard/
+   - Debe mostrar información de PHP
+   - La versión debe ser 7.4 o superior
+
+7. PRUEBA ACCEDER DIRECTAMENTE AL ARCHIVO
+   - http://localhost/lotto-sorteos-php/index.php
+   - Si esto funciona, el problema es con el .htaccess
+
+8. SI EL PROBLEMA PERSISTE:
+   - Crea un archivo test.php con solo: <?php phpinfo(); ?>
+   - Accede a: http://localhost/lotto-sorteos-php/test.php
+   - Si esto no funciona, el problema es con la configuración de XAMPP
+
+===========================================
+ARCHIVO .htaccess SIMPLIFICADO
+===========================================
+
+El archivo .htaccess ha sido simplificado para evitar conflictos.
+Si aún tienes problemas, puedes eliminarlo completamente.
+
+El proyecto funcionará sin .htaccess, solo perderás algunas
+optimizaciones menores.
+
+===========================================
+
+

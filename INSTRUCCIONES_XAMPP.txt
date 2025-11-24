@@ -1,0 +1,68 @@
+===========================================
+INSTRUCCIONES PARA XAMPP
+===========================================
+
+PASOS PARA INSTALAR EN XAMPP:
+
+1. Copia toda la carpeta "lotto-sorteos-php" a:
+   C:\xampp\htdocs\
+
+2. Renombra la carpeta si lo deseas (opcional):
+   Por ejemplo: C:\xampp\htdocs\lotto-sorteos\
+
+3. Inicia XAMPP:
+   - Abre el Panel de Control de XAMPP
+   - Inicia Apache (botón "Start")
+
+4. Abre tu navegador y visita:
+   http://localhost/lotto-sorteos-php/
+   
+   O si renombraste la carpeta:
+   http://localhost/[nombre-de-tu-carpeta]/
+
+===========================================
+ESTRUCTURA DE ARCHIVOS
+===========================================
+
+lotto-sorteos-php/
+├── index.php          (Archivo principal)
+├── .htaccess          (Configuración Apache)
+├── README.md          (Documentación)
+├── includes/          (Componentes PHP)
+│   ├── navbar.php
+│   ├── hero.php
+│   ├── faq.php
+│   └── footer.php
+├── assets/            (Imágenes)
+│   └── hero-money.jpg
+├── css/               (Estilos)
+│   └── styles.css
+└── js/                (JavaScript)
+    └── main.js
+
+===========================================
+NOTAS IMPORTANTES
+===========================================
+
+- Asegúrate de que Apache esté corriendo en XAMPP
+- El archivo .htaccess está incluido para configuración
+- No necesitas instalar dependencias (usa CDN para Tailwind)
+- El proyecto funciona con PHP 7.4 o superior
+
+===========================================
+SOLUCIÓN DE PROBLEMAS
+===========================================
+
+Si no ves la página:
+1. Verifica que Apache esté iniciado en XAMPP
+2. Verifica que la carpeta esté en C:\xampp\htdocs\
+3. Verifica la URL en el navegador
+4. Revisa los logs de error de Apache en XAMPP
+
+Si hay errores de PHP:
+- Verifica que PHP esté habilitado en XAMPP
+- Revisa la versión de PHP (debe ser 7.4+)
+
+===========================================
+
+

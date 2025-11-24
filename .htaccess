@@ -1,0 +1,17 @@
+# Apache Configuration for PHP Project
+# Set default charset
+AddDefaultCharset UTF-8
+
+# Enable PHP error reporting (for debugging - disable in production)
+php_flag display_errors On
+php_value error_reporting E_ALL
+
+# Redirigir la raíz a web/ (punto de entrada principal)
+RewriteEngine On
+RewriteCond %{REQUEST_URI} ^/$
+RewriteRule ^(.*)$ /web/$1 [L]
+
+# Permitir acceso directo a web/
+RewriteCond %{REQUEST_URI} ^/web/
+RewriteRule ^web/(.*)$ web/$1 [L]
+

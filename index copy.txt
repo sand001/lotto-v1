@@ -1,0 +1,13 @@
+﻿
+raiz\api\
+raiz\cms\
+raiz\template\
+raiz\web\
+
+
+raiz\api\  correspondera a la api
+raiz\cms\  correspondera a la api
+raiz\template\   Donde va el diseño de la pagina
+raiz\web\   Principal  ruta de acceso 
+
+

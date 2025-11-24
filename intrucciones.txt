@@ -1,0 +1,1 @@
+1.- implementar un diseño mas modular para poder deparar la logica 

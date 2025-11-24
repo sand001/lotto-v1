@@ -1,0 +1,220 @@
+/* Custom CSS Variables and Styles */
+:root {
+  --background: 0 0% 100%;
+  --foreground: 142 30% 15%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 142 30% 15%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 142 30% 15%;
+
+  --primary: 142 76% 36%;
+  --primary-foreground: 0 0% 100%;
+  
+  --primary-dark: 142 76% 28%;
+  
+  --secondary: 45 100% 51%;
+  --secondary-foreground: 142 30% 15%;
+
+  --muted: 142 20% 96%;
+  --muted-foreground: 142 15% 45%;
+
+  --accent: 142 76% 36%;
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 142 20% 90%;
+  --input: 142 20% 90%;
+  --ring: 142 76% 36%;
+
+  --radius: 0.75rem;
+  
+  --gradient-primary: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 28%));
+  --gradient-hero: linear-gradient(to bottom, hsl(142 76% 36% / 0.05), hsl(0 0% 100%));
+  
+  --shadow-soft: 0 4px 20px hsl(142 76% 36% / 0.1);
+  --shadow-medium: 0 8px 30px hsl(142 76% 36% / 0.15);
+  
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark {
+  --background: 142 20% 8%;
+  --foreground: 0 0% 98%;
+
+  --card: 142 20% 12%;
+  --card-foreground: 0 0% 98%;
+
+  --popover: 142 20% 12%;
+  --popover-foreground: 0 0% 98%;
+
+  --primary: 142 76% 36%;
+  --primary-foreground: 0 0% 100%;
+  
+  --primary-dark: 142 76% 28%;
+
+  --secondary: 45 100% 51%;
+  --secondary-foreground: 142 20% 8%;
+
+  --muted: 142 20% 15%;
+  --muted-foreground: 142 15% 65%;
+
+  --accent: 142 76% 36%;
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 142 20% 20%;
+  --input: 142 20% 20%;
+  --ring: 142 76% 36%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: 'Montserrat', system-ui, sans-serif;
+}
+
+/* Custom Utility Classes */
+.bg-primary {
+  background-color: hsl(var(--primary));
+}
+
+.bg-primary-foreground {
+  background-color: hsl(var(--primary-foreground));
+}
+
+.bg-secondary {
+  background-color: hsl(var(--secondary));
+}
+
+.bg-secondary-foreground {
+  background-color: hsl(var(--secondary-foreground));
+}
+
+.bg-background {
+  background-color: hsl(var(--background));
+}
+
+.bg-muted {
+  background-color: hsl(var(--muted));
+}
+
+.text-primary {
+  color: hsl(var(--primary));
+}
+
+.text-primary-foreground {
+  color: hsl(var(--primary-foreground));
+}
+
+.text-secondary {
+  color: hsl(var(--secondary));
+}
+
+.text-secondary-foreground {
+  color: hsl(var(--secondary-foreground));
+}
+
+.text-foreground {
+  color: hsl(var(--foreground));
+}
+
+.text-muted-foreground {
+  color: hsl(var(--muted-foreground));
+}
+
+.border-border {
+  border-color: hsl(var(--border));
+}
+
+.shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+
+.shadow-medium {
+  box-shadow: var(--shadow-medium);
+}
+
+/* Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-from-bottom {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-in {
+  animation: fade-in 0.7s ease-out;
+}
+
+.fade-in {
+  animation: fade-in 0.7s ease-out;
+}
+
+.slide-in-from-bottom-4 {
+  animation: slide-in-from-bottom 0.7s ease-out;
+}
+
+.slide-in-from-bottom-6 {
+  animation: slide-in-from-bottom 0.7s ease-out 0.15s both;
+}
+
+.slide-in-from-bottom-8 {
+  animation: slide-in-from-bottom 0.7s ease-out 0.3s both;
+}
+
+.slide-in-from-bottom-10 {
+  animation: slide-in-from-bottom 0.7s ease-out 0.5s both;
+}
+
+/* FAQ Accordion Styles */
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+.faq-content.active {
+  max-height: 500px;
+  padding-top: 1rem;
+}
+
+.faq-icon {
+  transition: transform 0.3s ease-out;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+/* Mobile Menu Styles */
+#mobile-menu.active {
+  max-height: 500px;
+}
+
