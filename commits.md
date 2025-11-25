@@ -47,3 +47,7 @@ git remote add origin https://github.com/sand001/lotto-v1
 
 # Subir cambios
 git push -u origin main
+
+
+
+
