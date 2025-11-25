@@ -12,8 +12,16 @@ git log --oneline --graph --decorate --all
 ## Gestión de cambios
 git status
 git add .
-git commit -m "5.0.0"
+git commit -m "5.1.0"
 git push
+
+## Gestión de cambios
+git status
+git add .
+git commit -m "5.1.0" -m "Dando formato de modulos a folder web"
+git push
+
+
 
 ## Comandos de Git
 

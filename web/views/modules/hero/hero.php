@@ -14,7 +14,7 @@ HERO
   ==================================-->
   <div 
     class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-    style="background-image: url('assets/hero-money.jpg');"
+    style="background-image: url('views/assets/img/hero-money.jpg');"
   >
     <div class="absolute inset-0 bg-gradient-to-b from-primary/95 via-primary/85 to-background/95"></div>
   </div>

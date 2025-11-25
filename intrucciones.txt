@@ -2,3 +2,34 @@
 
 git config --global user.email "casandi001@gmail.com"
 git config --global user.name "casandi001"
+
+2.- C:\Users\Admin\Documents\san\jscripts\lotto-v1\web\assets\hero-money.jpg  pun inside of 
+C:\Users\Admin\Documents\san\jscripts\lotto-v1\web\assets\img\hero-money.jpg
+
+3.-move 
+C:\Users\Admin\Documents\san\jscripts\lotto-v1\web\css into 
+C:\Users\Admin\Documents\san\jscripts\lotto-v1\web\assets
+
+C:\Users\Admin\Documents\san\jscripts\lotto-v1\web\js into 
+C:\Users\Admin\Documents\san\jscripts\lotto-v1\web\assets
+
+4.- move
+C:\Users\Admin\Documents\san\jscripts\lotto-v1\web\views\css   into 
+C:\Users\Admin\Documents\san\jscripts\lotto-v1\web\views\assets
+C:\Users\Admin\Documents\san\jscripts\lotto-v1\web\views\img   into 
+C:\Users\Admin\Documents\san\jscripts\lotto-v1\web\views\assets
+C:\Users\Admin\Documents\san\jscripts\lotto-v1\web\views\js   into 
+C:\Users\Admin\Documents\san\jscripts\lotto-v1\web\views\assets
+
+5.- move
+C:\Users\Admin\Documents\san\jscripts\lotto-v1\template\faq.php   into
+C:\Users\Admin\Documents\san\jscripts\lotto-v1\web\views\modules\faq\faq.php
+
+do the same for every file into 
+C:\Users\Admin\Documents\san\jscripts\lotto-v1\template 
+move in a folder with the file name like the example above
+C:\Users\Admin\Documents\san\jscripts\lotto-v1\web\views\modules
+
+
+
+
