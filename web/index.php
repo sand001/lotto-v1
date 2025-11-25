@@ -78,7 +78,7 @@ HEAD - META TAGS Y CONFIGURACIÓN
   CSS PERSONALIZADO
 
   ==================================-->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="views/assets/css/styles.css">
 </head>
 <body>
   <div class="min-h-screen">
@@ -88,18 +88,18 @@ HEAD - META TAGS Y CONFIGURACIÓN
 
     ==================================-->
     <?php 
-    $base_path = dirname(__DIR__);
-    if (file_exists($base_path . '/template/navbar.php')) {
-      include $base_path . '/template/navbar.php'; 
+    $base_path = __DIR__; // Apunta a web/
+    if (file_exists($base_path . '/views/modules/navbar/navbar.php')) {
+      include $base_path . '/views/modules/navbar/navbar.php'; 
     }
-    if (file_exists($base_path . '/template/hero.php')) {
-      include $base_path . '/template/hero.php'; 
+    if (file_exists($base_path . '/views/modules/hero/hero.php')) {
+      include $base_path . '/views/modules/hero/hero.php'; 
     }
-    if (file_exists($base_path . '/template/faq.php')) {
-      include $base_path . '/template/faq.php'; 
+    if (file_exists($base_path . '/views/modules/faq/faq.php')) {
+      include $base_path . '/views/modules/faq/faq.php'; 
     }
-    if (file_exists($base_path . '/template/footer.php')) {
-      include $base_path . '/template/footer.php'; 
+    if (file_exists($base_path . '/views/modules/footer/footer.php')) {
+      include $base_path . '/views/modules/footer/footer.php'; 
     }
     ?>
   </div>
@@ -109,6 +109,6 @@ HEAD - META TAGS Y CONFIGURACIÓN
   JAVASCRIPT
 
   ==================================-->
-  <script src="js/main.js"></script>
+  <script src="views/assets/js/main.js"></script>
 </body>
 </html>

@@ -18,7 +18,7 @@ git push
 ## Gestión de cambios
 git status
 git add .
-git commit -m "5.2.0" -m "Last update work"
+git commit -m "5.4.0" -m "moved into xampp"
 git push
 
 
