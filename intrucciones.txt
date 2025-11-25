@@ -1,3 +1,10 @@
+https://www.youtube.com/watch?v=020msq3s5Tg
+Panel de control\Cuentas de usuario\Administrador de credenciales
+git push origin master
+gh auth login
+
+
+
 1.- implementar un diseño mas modular para poder deparar la logica 
 
 git config --global user.email "casandi001@gmail.com"
@@ -31,5 +38,24 @@ move in a folder with the file name like the example above
 C:\Users\Admin\Documents\san\jscripts\lotto-v1\web\views\modules
 
 
+6.-  i ade the file 
+C:\Users\Admin\Documents\san\jscripts\lotto-v1\web\controllers\template.controller.php
+the content of index.php was moved into 
+C:\Users\Admin\Documents\san\jscripts\lotto-v1\web\views\modules\template.php
+an index only redict 
+C:\Users\Admin\Documents\san\jscripts\lotto-v1\web\index.php
+Tellme what i need to  make all funtional
+becaus i recive the next error
+
+Warning: include(views/template.php): Failed to open stream: No such file or directory in C:\Users\Admin\Documents\san\jscripts\lotto-v1\web\controllers\template.controller.php on line 11
+
+Warning: include(): Failed opening 'views/template.php' for inclusion (include_path='C:\xampp\php\PEAR') in C:\Users\Admin\Documents\san\jscripts\lotto-v1\web\controllers\template.controller.php on line 11
+
+
+7.-
+move 
+C:\Users\Admin\Documents\san\jscripts\lotto-v1\web\views\modules\template.php
+into 
+C:\Users\Admin\Documents\san\jscripts\lotto-v1\web\views\template.php
 
 

@@ -1,0 +1,2 @@
+[25-Nov-2025 02:43:57 Europe/Berlin] PHP Warning:  include(views/template.php): Failed to open stream: No such file or directory in C:\Users\Admin\Documents\san\jscripts\lotto-v1\web\controllers\template.controller.php on line 11
+[25-Nov-2025 02:43:57 Europe/Berlin] PHP Warning:  include(): Failed opening 'views/template.php' for inclusion (include_path='C:\xampp\php\PEAR') in C:\Users\Admin\Documents\san\jscripts\lotto-v1\web\controllers\template.controller.php on line 11

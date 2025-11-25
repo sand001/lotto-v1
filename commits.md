@@ -18,7 +18,7 @@ git push
 ## Gestión de cambios
 git status
 git add .
-git commit -m "5.1.0" -m "Dando formato de modulos a folder web"
+git commit -m "5.2.0" -m "Last update work"
 git push
 
 
