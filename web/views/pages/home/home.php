@@ -1,24 +1,3 @@
-<?php
-
-/*==================================
-Capturar las rutas de la URL
-==================================*/ 
-
-$routesArray = explode("/",$_SERVER["REQUEST_URI"]);
-
-array_shift($routesArray);
-
-foreach ($routesArray as $key => $value) {
-    $routesArray[$key] = explode("?", $value)[0];
-}
-
-echo "<pre>";
-print_r($routesArray);
-echo "</pre>";
-
-?>
-
-
 <!--=================================
 
 HEAD - META TAGS Y CONFIGURACIÓN
@@ -105,20 +84,24 @@ HEAD - META TAGS Y CONFIGURACIÓN
   <div class="min-h-screen">
     <!--=================================
 
-    INCLUSIÓN DE COMPONENTES PHP
+    INCLUSIÓN DE COMPONENTES PHP - ELEMENTOS DE HOME
 
     ==================================-->
     <?php 
-    $base_path = __DIR__; // Apunta a web/views/
+    // Ruta base para incluir módulos (desde web/views/pages/home/ hacia web/views/)
+    $base_path = dirname(dirname(__DIR__)); // Apunta a web/views/
+    
+    // Navbar
     if (file_exists($base_path . '/modules/navbar/navbar.php')) {
       include $base_path . '/modules/navbar/navbar.php'; 
     }
+    
+    // Hero (Sección principal de Home)
     if (file_exists($base_path . '/modules/hero/hero.php')) {
       include $base_path . '/modules/hero/hero.php'; 
     }
-    if (file_exists($base_path . '/modules/faq/faq.php')) {
-      include $base_path . '/modules/faq/faq.php'; 
-    }
+    
+    // Footer
     if (file_exists($base_path . '/modules/footer/footer.php')) {
       include $base_path . '/modules/footer/footer.php'; 
     }
@@ -133,3 +116,4 @@ HEAD - META TAGS Y CONFIGURACIÓN
   <script src="views/assets/js/main.js"></script>
 </body>
 </html>
+

@@ -59,3 +59,97 @@ into
 C:\Users\Admin\Documents\san\jscripts\lotto-v1\web\views\template.php
 
 
+i access into the proyect by the route
+http://localhost/lotto-v1/web/
+
+But configure inthe files the VirtualHost
+
+C:\xampp\apache\conf\extra
+C:\xampp\apache\conf\extra\httpd-vhosts.conf
+
+SOLUCIÓN COMPLETA PARA VIRTUALHOST:
+
+1. Edita el archivo: C:\xampp\apache\conf\extra\httpd-vhosts.conf
+
+2. Agrega la siguiente configuración COMPLETA (no solo las 3 líneas):
+
+<VirtualHost *:80>
+    DocumentRoot "C:/xampp/htdocs/lotto-v1/web"
+    ServerName web.lotto-v1.com
+    
+    <Directory "C:/xampp/htdocs/lotto-v1/web">
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+    
+    ErrorLog "C:/xampp/apache/logs/web.lotto-v1.com-error.log"
+    CustomLog "C:/xampp/apache/logs/web.lotto-v1.com-access.log" common
+</VirtualHost>
+
+3. IMPORTANTE: Verifica que en httpd.conf esté habilitado:
+   - Busca: #Include conf/extra/httpd-vhosts.conf
+   - Debe estar sin el #: Include conf/extra/httpd-vhosts.conf
+
+4. Edita el archivo hosts:
+C:\Windows\System32\drivers\etc
+C:\Windows\System32\drivers\etc\hosts
+	127.0.0.1       web.lotto-v1.com
+
+5. Reinicia Apache en XAMPP (Stop y luego Start)
+
+6. Accede a: http://web.lotto-v1.com/
+
+NOTA: Si aún tienes problemas, verifica los logs de error en:
+C:\xampp\apache\logs\web.lotto-v1.com-error.log
+C:\xampp\apache\logs\error.log
+
+
+7.-
+C:\xampp\htdocs\lottov1\web\index.php
+contendra
+<?php
+
+define('DIR', __DIR__);
+
+/*=============================================
+Depurar errores
+=============================================*/
+
+ini_set("display_errors",1);
+ini_set("log_errors",1);
+ini_set("error_log",DIR."/php_error_log");
+
+/*=============================================
+Requerimientos del sistema
+=============================================*/
+
+require_once "controllers/template.controller.php";
+
+/*=============================================
+Plantilla
+=============================================*/
+
+$index = new TemplateController();
+$index->index();
+
+
+
+
+
+lo demas sera renderizado por 
+C:\xampp\htdocs\lottov1\web\views\template.php
+
+
+
+8.-  
+
+C:\xampp\htdocs\lottov1\.htaccess
+solo quiero estas intrucciones dime como afectarian y si son viables
+Options All -Indexes
+Options -MultiViews
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]
