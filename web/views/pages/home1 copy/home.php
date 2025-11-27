@@ -1,30 +1,3 @@
-<?php
-
-/*==================================
-Capturar las rutas de la URL
-==================================*/ 
-
-$routesArray = explode("/",$_SERVER["REQUEST_URI"]);
-
-array_shift($routesArray);
-
-foreach ($routesArray as $key => $value) {
-    $routesArray[$key] = explode("?", $value)[0];
-}
-
-echo "<pre>";
-print_r($routesArray);
-echo "</pre>";
-
-/*==================================
-Validar estado de rifas
-==================================*/ 
-
-$raffle = 0;
-
-?>
-
-
 <!--=================================
 
 HEAD - META TAGS Y CONFIGURACIÓN
@@ -77,41 +50,30 @@ HEAD - META TAGS Y CONFIGURACIÓN
   <div class="min-h-screen">
     <!--=================================
 
-    INCLUSIÓN DE COMPONENTES PHP
+    INCLUSIÓN DE COMPONENTES PHP - ELEMENTOS DE HOME
 
     ==================================-->
     <?php 
-    $base_path = __DIR__; // Apunta a web/views/
+    // Ruta base para incluir módulos (desde web/views/pages/home/ hacia web/views/)
+    $base_path = dirname(dirname(__DIR__)); // Apunta a web/views/
+    
+    // Navbar
     if (file_exists($base_path . '/modules/navbar/navbar.php')) {
       include $base_path . '/modules/navbar/navbar.php'; 
     }
+    
+    // Hero (Sección principal de Home)
     if (file_exists($base_path . '/modules/hero/hero.php')) {
       include $base_path . '/modules/hero/hero.php'; 
     }
-    if($raffle == 1){
-      if($routesArray[0] == "coming-soon" || $routesArray[0] == "hola"){
-        include $base_path . '/pages/'.$routesArray[0].'/'.$routesArray[0].'.php';
-      }else{
-        include $base_path . '/pages/hola/hola.php';
-      }
-    }
-    if (file_exists($base_path . '/modules/faq/faq.php')) {
-      include $base_path . '/modules/faq/faq.php'; 
-    }
+    
+    // Footer
     if (file_exists($base_path . '/modules/footer/footer.php')) {
       include $base_path . '/modules/footer/footer.php'; 
     }
     ?>
-
-
-
-    <?php 
-    // $base_path = __DIR__; // Apunta a web/views/
-    // include $base_path . '/pages/hola/hola.php'
-    ?>
   </div>
 
-  
   <!--=================================
 
   JAVASCRIPT
@@ -120,3 +82,4 @@ HEAD - META TAGS Y CONFIGURACIÓN
   <script src="views/assets/js/main.js"></script>
 </body>
 </html>
+
